@@ -1,9 +1,9 @@
-all: install run
+all: build install run
 
 build: server.c
 	gcc -g3 -o server server.c
 run: server
-	./server
+	alarm-server
 install: build
 	chmod 777 server
 	chmod 777 gpio.sh
